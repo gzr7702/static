@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    state('Build') {
+    stage('Build') {
       steps {
         sh 'echo "Hello World"'
         sh '''
