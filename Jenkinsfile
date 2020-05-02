@@ -7,7 +7,8 @@ pipeline {
 
       steps {
         sh 'echo "Uploading code from S3"'
-        withAWS(region:'eu-east-2', credentials:'IDofAwsCredentials') {
+        withAWS(region:'eu-east-2', credentials:'aws-static') {
+          #s3Upload(file:'index.html, bucket:'gzr7702jenkinsbucket', path:'/')
         }
       }
     }
